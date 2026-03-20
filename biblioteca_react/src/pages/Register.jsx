@@ -17,7 +17,7 @@ function Register() {
             parola: parola
         };
 
-        axios.post("http://localhost:8080/api/membri", dateMembru)
+        axios.post("https://proiect-biblioteca.onrender.com/api/membri", dateMembru)
             .then(res => {
                 navigate("/login");
             })

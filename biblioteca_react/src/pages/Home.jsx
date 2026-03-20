@@ -6,7 +6,7 @@ function Home() {
     const [books, setBooks] = useState([]);
 
     useEffect(() => {
-        axios.get("http://localhost:8080/api/carti")
+        axios.get("https://proiect-biblioteca.onrender.com/api/carti")
             .then(response => setBooks(response.data))
             .catch(error => console.error("Eroare la încărcarea paginii principale:", error));
     }, []);

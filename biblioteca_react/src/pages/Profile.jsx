@@ -6,7 +6,7 @@ function Profile({ user }) {
     const [loans, setLoans] = useState([]);
 
     useEffect(() => {
-        const url = `http://localhost:8080/api/imprumuturi/membru/${user.id}`;
+        const url = `https://proiect-biblioteca.onrender.com/api/imprumuturi/membru/${user.id}`;
         axios.get(url)
             .then(res => setLoans(res.data || []))
             .catch(() => setLoans([]));

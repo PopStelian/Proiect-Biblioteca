@@ -7,7 +7,7 @@ function Categories() {
     const [selectedCategory, setSelectedCategory] = useState(null);
 
     useEffect(() => {
-        axios.get("http://localhost:8080/api/carti")
+        axios.get("https://proiect-biblioteca.onrender.com/api/carti")
             .then(response => {
                 setBooks(response.data);
                 // Setăm automat prima categorie ca fiind selectată la început

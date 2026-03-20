@@ -7,7 +7,7 @@ function Books({ searchTerm, user }) {
     const [books, setBooks] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:8080/api/carti')
+        axios.get('https://proiect-biblioteca.onrender.com/api/carti')
             .then(res => setBooks(res.data))
             .catch(err => console.error('Error loading books:', err));
     }, []);
@@ -48,7 +48,7 @@ function Books({ searchTerm, user }) {
         };
 
         try {
-            const res = await axios.post('http://localhost:8080/api/imprumuturi', payload);
+            const res = await axios.post('https://proiect-biblioteca.onrender.com/api/imprumuturi', payload);
             if (res.status === 200 || res.status === 201) {
                 alert('Împrumut realizat cu succes!');
                 setBooks(prev => prev.map(b => b.id === book.id ? { ...b, nrExemplare: (b.nrExemplare || 0) - 1 } : b));

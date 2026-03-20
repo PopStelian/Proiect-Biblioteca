@@ -12,7 +12,7 @@ function Login({ setAuth, onLogin }) {
         e.preventDefault();
         const credentials = { email, parola };
 
-        axios.post("http://localhost:8080/api/membri/login", credentials)
+        axios.post("https://proiect-biblioteca.onrender.com/api/membri/login", credentials)
             .then(res => {
                 setAuth(true);
                 onLogin(res.data);
